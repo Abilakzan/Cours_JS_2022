@@ -5,12 +5,38 @@
         <meta name="abi" content="exo 3">
     </head>
     <body>
-        <img src="https://ih1.redbubble.net/image.1073751969.9363/flat,750x1000,075,f.jpg" alt="All Might" onclick="myFunction(this)" width="auto" height="350px">
-        <img src="https://ih1.redbubble.net/image.1073751969.9363/flat,750x1000,075,f.jpg" alt="All Might" onclick="myFunction(this)" width="auto" height="350px">
+        <!--
+
+        <img src="https://ih1.redbubble.net/image.1073751969.9363/flat,750x1000,075,f.jpg" alt="All Might" onclick="myFunction(this)" width="auto" height="450px">
+        <img src="https://ih1.redbubble.net/image.1073751969.9363/flat,750x1000,075,f.jpg" alt="All Might" onclick="myFunction(this)" width="auto" height="450px">
+         -->
+
+        <img src="https://ih1.redbubble.net/image.1073751969.9363/flat,750x1000,075,f.jpg" width="40%" id="myImg">
+        <p>
+            <button type="button" onclick="agrandir()">+ Agrandir</button>
+            <button type="button" onclick="diminuer()">- Diminuer</button>
+        </p>
+
         <script>
-        function myFunction(evt) {
-            evt.style.height = "20%";
-        }
+            function agrandir() {
+                var myImg = document.getElementById("myImg");
+                var width = myImg.clientWidth;
+                if (width == "60%") {
+                    alert("Vous avez atteint le niveau de zoom maximal.");
+                } else {
+                    myImg.style.width = (width + 20) + "%";
+                }
+            }
+
+            function diminuer() {
+                var myImg = document.getElementById("myImg");
+                var width = myImg.clientWidth;
+                if (width == "20%") {
+                    alert("Vous avez atteint le niveau de zoom minimal.");
+                } else {
+                    myImg.style.width = (width - 20) + "%";
+                }
+            }
         </script>
     </body>
 </html>
