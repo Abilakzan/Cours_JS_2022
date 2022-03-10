@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 2">
+    </head>
+    <body>
+        <ul id="myList1">
+            <li onclick="myFunction(this)" id="liste">Coffee</li>
+            <li onclick="myFunction(this)" id="liste">Tea</li>
+            <li onclick="myFunction(this)" id="liste">Water</li>
+            <li onclick="myFunction(this)" id="liste">Milk</li>
+            <li onclick="myFunction(this)" id="liste">Juice</li>
+        </ul>
+        
+        <script>
+        function myFunction(evt) {
+            const list = document.getElementById("myList1");
+            list.insertBefore(evt, list.children[0]);
+        }
+        </script>
+    </body>
+</html>

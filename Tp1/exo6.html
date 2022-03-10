@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 5">
+    </head>
+    <body>
+        <ul>
+            <li>TOTO</li>
+            <li>TATA</li>
+            <li>TITI</li>
+            <li>TUTU</li>
+        </ul>
+        <script>
+            const element = document.getElementsByTagName('li')[1];
+            const list = document.createElement('li');
+            list.innerHTML = "Hello";
+            document.getElementsByTagName('ul')[0].replaceChild(list, element);
+        </script>
+    </body>
+</html>
