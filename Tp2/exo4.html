@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 3">
+    </head>
+    <body>
+        <div style="height: 50px; width: 50px; background-color: pink;" onclick="direction()"></div>
+        <script>
+            function direction(){
+                window.onkeydown = function(e) {
+                    var key = e.keyCode || e.which;
+                    switch (key) {
+                        case 37:
+                        //-Move left
+                        break;
+                    case 39:
+                        //-Move right
+                        break;
+                    case 38:
+                        //-Move up
+                        break;
+                    case 40:
+                        //-Move down
+                        break;
+                    default:
+                        break;
+                    }
+                };
+            }
+        </script>
+    </body>
+</html>
