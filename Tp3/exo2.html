@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 2">
+    </head>
+    <body>
+        <script>
+            const j = Math.floor(Math.random() * 11) + 5;
+            for(let i=0; i < j; i++){
+                const myElement = document.createElement("div");
+                myElement.style.width = "100%";
+                myElement.style.height = "50px";
+                myElement.style.backgroundColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+                document.getElementsByTagName('body')[0].appendChild(myElement); 
+            }
+        </script>
+    </body>
+</html>

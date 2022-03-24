@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 4">
+    </head>
+    <body>
+        <ul>
+            
+        </ul>
+        <script>
+            el = document.getElementsByTagName('body')[0];
+            el.addEventListener('keydown', function getKey(event){
+                const element = document.getElementsByTagName('ul')[0];
+                const text = document.createTextNode(event.key);
+                const list = document.createElement('li');
+                list.appendChild(text);
+                element.appendChild(list);
+                if(list>20){
+                    console.log(event.key);
+                }else{
+                    const nouveau = document.getElementsByTagName('li')[20];
+                    const old = document.getElementsByTagName('li')[0];
+                    document.replaceChild(nouveau, old);
+                }
+            })
+        </script>
+    </body>
+</html>

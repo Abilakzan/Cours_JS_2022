@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 1">
+    </head>
+    <body>
+        <div style="width: 50px; height: 50px; background-color: black; margin: 10px;" id="div1"></div>
+        <div style="width: 50px; height: 50px; background-color: black; margin: 10px;" id="div1"></div>
+        <div style="width: 50px; height: 50px; background-color: black; margin: 10px;" id="div1"></div>
+        <script>
+                el = document.getElementsByTagName('body')[0];
+                el.addEventListener('click', function(event){
+                    if(event.target.style.backgroundColor == "black"){
+                        event.target.style.backgroundColor = "red";
+                    }else{
+                        event.target.style.backgroundColor = "black";
+                    }
+                })
+        </script>
+    </body>
+</html>
