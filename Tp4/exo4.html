@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 4">
+    </head>
+    <body>
+        <script>
+            const pascalCase = (str) => {
+                const strCara = str.split(" ");
+                for (let i = 0; i < strCara.length; i++) {
+                    strCara[i] = ucFisrt(strCara[i]);
+                }
+                return strCara.join("");
+            }
+            console.log(pascalCase("sentence in pascalCase"));
+            console.log(pascalCase("phrase en pascalCase"));
+        </script>
+    </body>
+</html>

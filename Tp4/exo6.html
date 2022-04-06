@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 6">
+    </head>
+    <body>
+        <script>
+            const findLongestWord = (str) => {
+              const strCara = str.split(" ");
+      
+              const longWord = "";
+      
+              for (let i = 0; i < strCara.length; i++) {
+                  if (strCara[i].length > longWord.length) {
+                    longWord = strCara[i];
+                  };
+              }
+              return longWord;
+            }
+            console.log(findLongestWord("Le chemin le plus court n'est pas toujours le meilleur"));
+            console.log(findLongestWord("Je vais au concert ce soir et je rentrerai tard."));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 5">
+    </head>
+    <body>
+        <script>
+            window.onresize = screenTaille;
+            window.onload = screenTaille;
+
+            function screenTaille() {
+                const X = window.innerWidth;
+                const Y = window.innerHeight;
+                document.getElementsByTagName("body")[0].innerHTML = X + "px x " + Y + "px";
+            }
+        </script>
+    </body>
+</html>

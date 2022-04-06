@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 1">
+    </head>
+    <body>
+        <script>
+            const getHashTags = (str) => {
+                return str.map(function (elemnt) {
+                    return "#" + elemnt.toLowerCase();
+                });
+            };
+            console.log(getHashTags("How the Avocado Became the Fruit of the Global Trade"));
+            console.log(getHashTags("Why You Will Probably Pay More for Your Christmas Tree This Year"));
+            console.log(getHashTags("Hey Parents, Surprise, Fruit Juice Is Not Fruit"));
+            console.log(getHashTags("Visualizing Science"));
+        </script>
+    </body>
+</html>

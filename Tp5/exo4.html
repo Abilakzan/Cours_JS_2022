@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 4">
+    </head>
+    <body>
+        <script>
+            const first = [0, 2, 4, 6, 8, 8];
+            const second = [1, 2, 3, 4, 5, 6];
+      
+            const arrayDiff = (evt, objet) => {
+              return Array.from(new Set(evt.filter((value) => !objet.includes(value)).concat(objet.filter((value) => !evt.includes(value))))).sort();
+            };
+      
+            console.log(arrayDiff(first, second));
+        </script>
+    </body>
+</html>
