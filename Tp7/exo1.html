@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 1">
+    </head>
+    <body>
+        <script>
+            function success(evt) {
+                console.log(evt);
+            }
+
+            function erreur(obj) {
+                console.log(obj);
+            }
+
+            function longeur(str) {
+                return new Promise((success, erreur) => {
+                    if (str.length < 20) {
+                        success(true);
+                    } else {
+                        erreur(`La chaîne contient plus de 20 caractères.`);
+                    }
+                });
+            }
+            const promise = longeur("Anticonstitutionnellement");
+            promise.then(success, erreur);
+        </script>
+    </body>
+</html>

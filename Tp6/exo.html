@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo">
+    </head>
+    <body>
+        <script>
+            const voyelle = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
+            const mois = ["A", "B", "C", "D", "E", "H", "L", "M", "P", "R", "S", "T"];
+      
+            const prenomc = (prenom) => {
+              let name = Array.from(prenom).filter(
+                (value) => !voyelle.includes(value)
+              );
+      
+              if (name.length > 3) {
+                  name.splice(1, 1);
+              }
+      
+              else if (name.length < 3) {
+                name = name.concat(
+                  Array.from(prenom).filter((value) => voyelle.includes(value))
+                );
+                name.push("x","x","x");
+              }
+      
+              return name.slice(0, 3).join("").toUpperCase();
+            };
+                  
+            const surname = (nom) => {
+              let surname = Array.from(nom).filter(
+                (value) => !voyelle.includes(value)
+              );
+      
+              if (surname.length < 3) {
+                surname = surname.concat(
+                  Array.from(nom).filter((value) => voyelle.includes(value))
+                );
+                surname.push("x","x","x");
+              }
+      
+              return surname.slice(0, 3).join("").toUpperCase();
+            };
+      
+            const fiscalCode = (obj) => {
+              console.log(surname(obj.surname)+prenomc(obj.name));
+            };
+      
+            fiscalCode({
+              name: "Matt",
+              surname: "Edabit",
+              gender: "M",
+              dob: "1/1/1900",
+            }); //"DBTMTT00A01"
+      
+            fiscalCode({
+              name: "Helen",
+              surname: "Yu",
+              gender: "F",
+              dob: "1/12/1950",
+            }); //"YUXHLN50T41"
+      
+            fiscalCode({
+              name: "Mickey",
+              surname: "Mouse",
+              gender: "M",
+              dob: "16/1/1928",
+            }); //"MSOMKY28A16"
+        </script>
+    </body>
+</html>

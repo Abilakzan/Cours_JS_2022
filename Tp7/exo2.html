@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="abi" content="exo 2">
+    </head>
+    <body>
+        <script>
+            function success(evt) {
+                console.log(evt);
+            }
+            function erreur(obj) {
+                console.log(obj);
+            }
+            function soustraction(a, b) {
+                return new Promise((success, erreur) => {
+                    if (a > b) {
+                        success(`${a - b}`);
+                    } else {
+                        erreur(`La variable a n'est pas supperieur à la variable B`);
+                    }
+                });
+            }
+            const promise = soustraction(
+                Math.floor(Math.random())
+            );
+            promise.then(success, erreur);
+        </script>
+    </body>
+</html>
